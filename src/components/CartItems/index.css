@@ -1,0 +1,137 @@
+* {
+  font-family: 'DM Sans';
+}
+.list-items-in-cart {
+  display: flex;
+  margin: 16px;
+}
+
+.img-in-cart {
+  width: 120px;
+  height: 110px;
+  border-radius: 10px;
+}
+.card-cart {
+  width: 35%;
+  display: flex;
+}
+.name-in-cart {
+  color: #183b56;
+  font-size: 18px;
+  align-self: center;
+  font-weight: 600;
+  margin-left: 10px;
+}
+.quantity-card {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+}
+.increment-btn-cart {
+  height: 25px;
+  width: 25px;
+  background-color: transparent;
+  margin-right: 10px;
+  border-width: 2px;
+  border-radius: 6px;
+  align-self: center;
+}
+.quantity-text-cart {
+  color: #000000;
+  font-size: 16px;
+  align-self: center;
+  font-weight: 600;
+  margin-right: 10px;
+}
+.price-cart-card {
+  width: 30%;
+  display: flex;
+  justify-content: center;
+}
+.price-cart {
+  font-size: 18px;
+  color: #ffa412;
+  font-weight: 600;
+  align-self: center;
+}
+.rupee-cart {
+  fill: #ffa412;
+  font-size: 16px;
+  align-self: center;
+}
+.ruler {
+  margin-top: 20px;
+}
+.price-cart-card-mobile {
+  width: 40%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.flex-mobile-cart {
+  display: flex;
+}
+.name-in-cart-mobile {
+  color: #183b56;
+  font-size: 18px;
+  font-weight: 600;
+  margin-left: 10px;
+  padding-bottom: 10px;
+}
+.button-close {
+  width: 5%;
+  display: flex;
+  justify-content: flex-end;
+}
+.close-btn {
+  border: none;
+  background-color: transparent;
+  align-self: center;
+  cursor: pointer;
+}
+.close-icon {
+  font-size: 20px;
+}
+@media screen and (max-width: 768px) {
+  .quantity-card {
+    display: none;
+  }
+  .card-cart {
+    width: 60%;
+  }
+  .price-cart-card {
+    display: none;
+  }
+  .name-in-cart {
+    display: none;
+  }
+  .img-in-cart {
+    width: 150px;
+  }
+  .button-close {
+    display: none;
+  }
+}
+@media screen and (min-width: 768px) {
+  .price-cart-card-mobile {
+    display: none;
+  }
+  .name-in-cart-mobile {
+    display: none;
+  }
+}
+@media screen and (min-width: 992px) {
+  .img-in-cart {
+    width: 180px;
+  }
+  .name-in-cart {
+    font-size: 20px;
+  }
+  .price-cart {
+    font-size: 20px;
+  }
+  .rupee-cart {
+    font-size: 18px;
+  }
+}

@@ -1,0 +1,94 @@
+* {
+  font-family: 'DM Sans';
+}
+.each-restaurant-list {
+  width: 355px;
+  margin: 15px;
+  padding: 10px;
+  display: flex;
+}
+.restaurant-image {
+  width: 58%;
+  height: 130px;
+  border-radius: 15px;
+  margin-right: 12px;
+}
+.review-card {
+  width: 40%;
+  padding-left: 5px;
+}
+.name {
+  color: #334155;
+  font-size: 20px;
+  padding-bottom: 10px;
+}
+.food-type {
+  color: #64748b;
+  font-size: 15px;
+  padding-bottom: 10px;
+}
+.inner-card {
+  display: flex;
+  padding-bottom: 10px;
+}
+.star-icon {
+  margin-right: 8px;
+  font-size: 20px;
+  align-self: center;
+}
+.rating-num {
+  font-size: 16px;
+  font-weight: 700;
+  margin-left: 0px;
+  margin-right: 8px;
+  color: #000000;
+}
+.total-reviews {
+  color: #64748b;
+  font-size: 14px;
+  align-self: center;
+}
+.link-component {
+  text-decoration: none;
+}
+@media screen and (max-width: 768px) {
+  .star-icon {
+    font-size: 16px;
+  }
+  .rating-num {
+    font-size: 14px;
+  }
+  .total-reviews {
+    font-size: 12px;
+  }
+  .name {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 772px) {
+  .each-restaurant-list {
+    width: 330px;
+  }
+  .restaurant-image {
+    height: 140px;
+  }
+  .rating-num {
+    font-size: 14px;
+  }
+  .total-reviews {
+    font-size: 12px;
+  }
+  .name {
+    font-size: 16px;
+  }
+}
+
+@media screen and (min-width: 1200px) {
+  .each-restaurant-list {
+    width: 430px;
+  }
+  .restaurant-image {
+    height: 170px;
+  }
+}

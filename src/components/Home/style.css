@@ -1,0 +1,255 @@
+* {
+  font-family: 'DM Sans';
+}
+.carousel-container {
+  width: 100vw;
+  list-style-type: none;
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.description-card {
+  margin-top: 20px;
+  padding: 15px;
+  padding-left: 20px;
+  padding-right: 20px;
+  padding-bottom: 15px;
+}
+.restaurant-text {
+  font-size: 25px;
+  color: #183b56;
+}
+.description-text {
+  font-size: 16px;
+  color: #64748b;
+  font-weight: 550;
+}
+.flex-sort {
+  display: flex;
+}
+.sort-icon {
+  font-size: 25px;
+  margin-right: 10px;
+  align-self: center;
+}
+.label-for-sort {
+  font-size: 20px;
+  color: #000000;
+  font-weight: 500;
+  align-self: center;
+}
+.dropdown-large-device {
+  width: 40%;
+  display: flex;
+  justify-content: flex-end;
+}
+.dropdown-sorting-card {
+  color: #000000;
+  padding: 20px;
+  border: none;
+  background-color: #ffffff;
+  font-size: 20px;
+  font-weight: 500;
+}
+.custom-option-bg:hover {
+  background-color: #dfedf5;
+  color: #000000;
+}
+.tick {
+  font-size: 20px;
+  fill: #c1f5cf;
+  margin-left: 5px;
+}
+.sorting-card-small {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.horizontal-line-large {
+  padding-left: 10%;
+  padding-right: 10%;
+}
+.failure-view-card {
+  padding: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 25px;
+  margin-top: 10px;
+}
+.img-failure {
+  width: 50%;
+}
+.failure-heading {
+  font-size: 20px;
+  text-align: center;
+}
+.description-failure {
+  font-size: 15px;
+  color: #64748b;
+  text-align: center;
+}
+.retry-btn {
+  width: 100px;
+  height: 35px;
+  color: #ffffff;
+  background-color: #f7931e;
+  border: none;
+  border-radius: 15px;
+  margin-top: 20px;
+  cursor: pointer;
+  font-size: 15px;
+}
+.loader-container {
+  padding: 20px;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 25px;
+  margin-top: 10px;
+  height: 300px;
+}
+.pagination-card {
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+.btn-pagination {
+  cursor: pointer;
+  height: 28px;
+  width: 28px;
+  background-color: transparent;
+  margin-right: 14px;
+  border-width: 1px;
+  align-self: center;
+}
+.arrow {
+  font-size: 16px;
+}
+.pagination-text {
+  color: #334155;
+  font-size: 20px;
+  font-weight: 600;
+  font-family: 'Bree Serif';
+  margin-right: 14px;
+}
+.RestaurantItems-list {
+  list-style-type: none;
+  padding-left: 20px;
+  padding-right: 20px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.search-card {
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 15px;
+  padding-left: 10%;
+  padding-right: 10%;
+  display: flex;
+}
+.search-input {
+  width: 40%;
+  height: 35px;
+  background-color: transparent;
+  padding: 10px;
+  color: #000000;
+  border-radius: 8px;
+}
+.search-btn {
+  border: none;
+  background-color: transparent;
+  margin-left: 15px;
+  cursor: pointer;
+}
+.search-icon {
+  font-size: 25px;
+}
+@media screen and (max-width: 768px) {
+  .carousel-container {
+    padding-left: 0px;
+    padding-right: 0px;
+  }
+  .dropdown-large-device {
+    display: none;
+  }
+  .horizontal-line-large {
+    display: none;
+  }
+  .search-card {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .search-input {
+    width: 60%;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .description-card {
+    padding-left: 10%;
+    padding-right: 10%;
+    display: flex;
+  }
+  .description-card-width {
+    width: 60%;
+  }
+  .label-for-sort {
+    font-size: 18px;
+  }
+  .dropdown-sorting-card {
+    font-size: 18px;
+  }
+  .sorting-card-small {
+    display: none;
+  }
+  .failure-view-card {
+    padding: 10%;
+    padding: 10%;
+    padding-top: 40px;
+    margin-top: 15px;
+  }
+  .failure-heading {
+    font-size: 30px;
+  }
+  .description-failure {
+    font-size: 20px;
+  }
+  .loader-container {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .pagination-card {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+  .btn-pagination {
+    width: 40px;
+    height: 40px;
+  }
+  .arrow {
+    font-size: 20px;
+  }
+  .pagination-text {
+    font-size: 24px;
+  }
+  .RestaurantItems-list {
+    padding-left: 10%;
+    padding-right: 10%;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .description-text {
+    font-size: 17px;
+  }
+  .restaurant-text {
+    font-size: 35px;
+  }
+}

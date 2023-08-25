@@ -1,0 +1,107 @@
+* {
+  font-family: 'roboto';
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+.each-details {
+  width: 355px;
+  margin: 15px;
+  padding: 10px;
+  display: flex;
+}
+.image-each-details {
+  width: 58%;
+  height: 130px;
+  border-radius: 15px;
+  margin-right: 12px;
+}
+.price-card {
+  display: flex;
+  margin-bottom: 5px;
+}
+.rupee {
+  font-size: 17px;
+  margin-right: 8px;
+  align-self: center;
+}
+.price {
+  font-size: 15px;
+  color: #64748b;
+  font-weight: 700;
+  padding-top: 5px;
+}
+.star {
+  font-size: 17px;
+  margin-right: 8px;
+  align-self: center;
+  fill: #f7c214;
+  margin-right: 8px;
+}
+.rating {
+  color: #000000;
+  font-size: 14px;
+  font-weight: 750;
+}
+.name-style {
+  font-size: 18px;
+}
+.add-btn {
+  height: 30px;
+  width: 50px;
+  background-color: transparent;
+  color: #ffa412;
+  border-width: 2px;
+  border-color: #ffa412;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-top: 5px;
+}
+.increment-dec-card {
+  display: flex;
+  margin-top: 10px;
+}
+.increment-btn {
+  height: 30px;
+  width: 30px;
+  background-color: transparent;
+  margin-right: 10px;
+  border-width: 2px;
+  border-radius: 6px;
+}
+.increment-icon {
+  font-size: 15px;
+}
+.quantity-text {
+  color: #000000;
+  font-size: 20px;
+  align-self: center;
+  font-weight: 600;
+  margin-right: 10px;
+}
+@media screen and (min-width: 768px) {
+  .each-details {
+    width: 400px;
+  }
+  .image-each-details {
+    width: 58%;
+    height: 150px;
+  }
+  .rupee {
+    font-size: 23px;
+  }
+  .price {
+    font-size: 18px;
+  }
+  .star {
+    font-size: 23px;
+  }
+  .rating {
+    color: #000000;
+    font-size: 18px;
+    font-weight: 700;
+  }
+  .name-style {
+    font-size: 19px;
+  }
+}

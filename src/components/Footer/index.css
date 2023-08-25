@@ -1,0 +1,94 @@
+.footer-card {
+  margin-top: 20px;
+  background-color: #0f172a;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding-top: 7%;
+  padding-bottom: 7%;
+  width: 100vw;
+}
+.footer-logo-card {
+  display: flex;
+  padding-bottom: 10px;
+}
+.footer-logo-img {
+  width: 50px;
+  align-self: center;
+  margin-right: 10px;
+}
+.footer-name-company {
+  font-family: 'DM Sans';
+  font-size: 18px;
+  font-style: italic;
+  font-weight: 700;
+  line-height: 24px;
+  letter-spacing: 0px;
+  color: #ffffff;
+  align-self: center;
+}
+.footer-description {
+  font-size: 15px;
+  font-weight: 400;
+  letter-spacing: 0px;
+  color: #ffffff;
+  font-family: 'DM Sans';
+  padding-bottom: 10px;
+}
+.footer-link-list {
+  list-style-type: none;
+  display: flex;
+}
+.list-card-footer {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-radius: 10px;
+  background-color: #ffffff;
+  margin-right: 8px;
+  align-self: center;
+}
+.footer-link-icon {
+  font-size: 20px;
+}
+.list-card-footer-instagram {
+  background-color: transparent;
+  margin-right: 8px;
+  height: 40px;
+  width: 40px;
+}
+.footer-link-icon-instagram {
+  font-size: 40px;
+  fill: #ffffff;
+}
+.list-card-footer-fb {
+  width: 32px;
+  height: 32px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: center;
+  background-color: #ffffff;
+  align-self: center;
+  border-radius: 10px;
+  margin-right: 8px;
+}
+@media screen and (min-width: 768px) {
+  .footer-logo-card {
+    padding-bottom: 20px;
+  }
+  .footer-logo-img {
+    width: 80px;
+  }
+  .footer-name-company {
+    font-size: 25px;
+  }
+  .footer-description {
+    font-size: 20px;
+    padding-bottom: 20px;
+  }
+}

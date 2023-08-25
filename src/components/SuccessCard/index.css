@@ -1,0 +1,59 @@
+.card-success {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.success-circle {
+  height: 50px;
+  width: 50px;
+  border-radius: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: #32a852;
+  padding-bottom: 10px;
+}
+.success-tick {
+  font-size: 28px;
+  fill: #ffffff;
+  align-self: center;
+}
+.success-heading {
+  color: #1e293b;
+  font-size: 28px;
+  padding-bottom: 10px;
+}
+.success-description {
+  color: #64748b;
+  font-size: 17px;
+  padding-bottom: 10px;
+}
+.btn-success {
+  color: #ffffff;
+  background-color: #f7931e;
+  border: none;
+  border-radius: 15px;
+  margin-top: 20px;
+  cursor: pointer;
+  width: 150px;
+  height: 40px;
+}
+.gotToHomeLink {
+  text-decoration: none;
+}
+@media screen and (max-width: 768px) {
+  .success-heading {
+    font-size: 20px;
+  }
+  .success-description {
+    font-size: 14px;
+  }
+  .btn-success {
+    font-size: 14px;
+    height: 35px;
+    width: 130px;
+  }
+}
