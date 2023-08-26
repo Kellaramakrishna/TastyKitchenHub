@@ -127,8 +127,25 @@ class RestaurantDetails extends Component {
     )
   }
 
+  getAddButton = id => {
+    this.setState(prevState => ({
+      foodItemsList: prevState.foodItemsList.map(eachItem => {
+        if (eachItem.id === id) {
+          return {
+            ...eachItem,
+            isAdded: !eachItem.isAdded,
+            quantity: 0,
+          }
+        }
+        return eachItem
+      }),
+    }))
+  }
+
   decrementItem = (id, quantity, decrementCart) => {
-    if (quantity > 1) {
+    if (quantity === 1) {
+      this.getAddButton(id)
+    } else {
       this.setState(
         prevState => ({
           foodItemsList: prevState.foodItemsList.map(eachItem => {

@@ -8,7 +8,9 @@ const CartItems = props => {
   const {id, cost, quantity, imageUrl, name} = eachItem
 
   const decrementFun = () => {
-    if (quantity > 1) {
+    if (quantity === 1 || quantity === 0) {
+      onDeleteCartItem(id)
+    } else {
       onDecrement(id)
     }
   }

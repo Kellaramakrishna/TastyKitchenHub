@@ -14,7 +14,7 @@ const DetailsItems = props => {
       {value => {
         const {addToCart, incrementCart, decrementCart} = value
         const decrementFun = () => {
-          decrementItem(id, quantity, decrementCart)
+          decrementItem(id, quantity, decrementCart, quantity)
         }
 
         const incrementFun = () => {
@@ -52,7 +52,7 @@ const DetailsItems = props => {
         )
 
         const getToggleButton = () => {
-          if (isAdded === undefined) {
+          if (isAdded === undefined || isAdded === false) {
             return getAddButton()
           }
           return getIncrementAndDecrement()

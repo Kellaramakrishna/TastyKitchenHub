@@ -51,11 +51,7 @@ const Header = props => {
               <Popup
                 modal
                 trigger={
-                  <button
-                    className="button-logout"
-                    type="button"
-                    onClick={logoutBtn}
-                  >
+                  <button className="button-logout" type="button">
                     Logout
                   </button>
                 }
@@ -74,7 +70,11 @@ const Header = props => {
                         >
                           Close
                         </button>
-                        <button type="button" className="conform-btn">
+                        <button
+                          type="button"
+                          className="conform-btn"
+                          onClick={logoutBtn}
+                        >
                           Conform
                         </button>
                       </div>
