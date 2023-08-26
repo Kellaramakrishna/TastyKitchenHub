@@ -3,6 +3,7 @@ import Popup from 'reactjs-popup'
 import {Link, withRouter} from 'react-router-dom'
 import Cookies from 'js-cookie'
 import {GiHamburgerMenu} from 'react-icons/gi'
+import {CgProfile} from 'react-icons/cg'
 import {AiFillCloseCircle} from 'react-icons/ai'
 import AddCartContext from '../../context/AddCartContext'
 
@@ -47,11 +48,22 @@ const Header = props => {
                   </li>
                 </button>
               </Link>
+              <Link to="/profile" className="link-nav">
+                <button type="button" className="btn-links-mobile">
+                  <li className="link-list-mobile">
+                    <CgProfile className="profile-icon" />
+                  </li>
+                </button>
+              </Link>
 
               <Popup
                 modal
                 trigger={
-                  <button className="button-logout" type="button">
+                  <button
+                    className="button-logout"
+                    type="button"
+                    style={{height: '30px', width: '80px'}}
+                  >
                     Logout
                   </button>
                 }

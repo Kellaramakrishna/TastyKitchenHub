@@ -1,9 +1,4 @@
-import {
-  FaPinterestSquare,
-  FaInstagram,
-  FaTwitter,
-  FaFacebookSquare,
-} from 'react-icons/fa'
+import {FaPinterestP, FaInstagram, FaTwitter, FaFacebookF} from 'react-icons/fa'
 import './index.css'
 
 const Footer = () => (
@@ -22,7 +17,7 @@ const Footer = () => (
 
     <ul className="footer-link-list">
       <li className="list-card-footer">
-        <FaPinterestSquare className="footer-link-icon" />
+        <FaPinterestP className="footer-link-icon" />
       </li>
       <li className="list-card-footer-instagram">
         <FaInstagram className="footer-link-icon-instagram" />
@@ -31,7 +26,7 @@ const Footer = () => (
         <FaTwitter className="footer-link-icon-instagram" />
       </li>
       <li className="list-card-footer-fb">
-        <FaFacebookSquare className="footer-link-icon" />
+        <FaFacebookF className="footer-link-icon" />
       </li>
     </ul>
   </div>

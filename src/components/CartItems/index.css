@@ -93,6 +93,22 @@
 .close-icon {
   font-size: 20px;
 }
+.price-cart-mobile {
+  font-size: 16px;
+  color: #ffa412;
+  font-weight: 700;
+  padding-top: 10px;
+  align-self: center;
+}
+.btn-remove-mobile {
+  margin-top: 5px;
+  color: #000000;
+  font-size: 16px;
+  cursor: pointer;
+  border: none;
+  background-color: transparent;
+  font-weight: 700;
+}
 @media screen and (max-width: 768px) {
   .quantity-card {
     display: none;
@@ -111,6 +127,9 @@
   }
   .button-close {
     display: none;
+  }
+  .rupee-cart {
+    margin-top: 10px;
   }
 }
 @media screen and (min-width: 768px) {

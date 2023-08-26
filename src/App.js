@@ -7,6 +7,7 @@ import ProtectedRoute from './components/ProtectedRoute'
 import AddCartContext from './context/AddCartContext'
 import Cart from './components/Cart'
 import NotFound from './components/NotFound'
+import Profile from './components/Profile'
 import './App.css'
 
 class App extends Component {
@@ -109,6 +110,7 @@ class App extends Component {
             />
             <ProtectedRoute exact path="/" component={Home} />
             <ProtectedRoute exact path="/cart" component={Cart} />
+            <ProtectedRoute exact path="/profile" component={Profile} />
             <Route component={NotFound} />
           </Switch>
         </AddCartContext.Provider>

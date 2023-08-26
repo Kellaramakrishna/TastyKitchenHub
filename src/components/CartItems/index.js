@@ -65,8 +65,11 @@ const CartItems = props => {
         {getIncrementAndDecrement()}
         <div className="flex-mobile-cart">
           <BiRupee className="rupee-cart" />
-          <p className="price-cart">{cost * quantity}.00</p>
+          <p className="price-cart-mobile">{cost * quantity}.00</p>
         </div>
+        <button type="button" className="btn-remove-mobile" onClick={deleteBtn}>
+          Remove
+        </button>
       </div>
     </li>
   )

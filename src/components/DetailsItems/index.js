@@ -12,9 +12,9 @@ const DetailsItems = props => {
   return (
     <AddCartContext.Consumer>
       {value => {
-        const {addToCart, incrementCart, decrementCart} = value
+        const {addToCart, incrementCart, decrementCart, deleteCart} = value
         const decrementFun = () => {
-          decrementItem(id, quantity, decrementCart, quantity)
+          decrementItem(id, quantity, decrementCart, deleteCart)
         }
 
         const incrementFun = () => {
