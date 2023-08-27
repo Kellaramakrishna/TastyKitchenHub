@@ -1,0 +1,114 @@
+* {
+  font-family: 'Dm Sans';
+}
+.form-for-user-details {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 25px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+}
+.card-for-input {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+}
+.input-form {
+  width: 100%;
+  height: 35px;
+  background-color: transparent;
+  border-color: #aeb0af;
+  border-radius: 5px;
+  padding: 5px;
+  margin-bottom: 6px;
+  color: #000000;
+  font-size: 15px;
+  border-width: 1px;
+}
+.heading-form {
+  display: flex;
+  justify-content: center;
+}
+.form-heading {
+  text-align: center;
+  color: #0635a1;
+  margin-top: 15px;
+  margin-bottom: 15px;
+  padding: 10px;
+  width: 80%;
+  box-shadow: 5px 5px 10px;
+  border-radius: 10px;
+  font-size: 18px;
+}
+.label-form {
+  margin-bottom: 10px;
+  color: #000000;
+  font-weight: 600;
+}
+.textarea-form {
+  height: 50px;
+  width: 100%;
+  background-color: transparent;
+  border-color: #aeb0af;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 14px;
+  color: #000000;
+  font-size: 15px;
+  border-width: 1px;
+}
+.flex-city-state {
+  width: 80%;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.card-city-name {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  margin: 10px;
+  margin-left: 0px;
+}
+.btn-form-submit {
+  height: 35px;
+  width: 100px;
+  color: #ffffff;
+  background-color: #f7931e;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+  margin-bottom: 15px;
+  margin-top: 10px;
+}
+.error-msg-form {
+  color: #fc1605;
+  margin-bottom: 15px;
+}
+
+@media screen and (min-width: 768px) {
+  .form-for-user-details {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+  .card-for-input {
+    width: 50%;
+  }
+  .flex-city-state {
+    width: 50%;
+    justify-content: flex-start;
+  }
+  .input-form {
+    width: 100%;
+    font-size: 16px;
+  }
+  .form-heading {
+    font-size: 24px;
+    width: 50%;
+  }
+  .card-city-name {
+    width: 45%;
+  }
+}

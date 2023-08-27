@@ -44,7 +44,9 @@ class Login extends Component {
   }
 
   submitDetails = event => {
+    const {username} = this.state
     event.preventDefault()
+    localStorage.setItem('username', JSON.stringify(username))
     this.getAnApiCall()
   }
 

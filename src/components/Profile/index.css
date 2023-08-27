@@ -1,0 +1,271 @@
+* {
+  font-family: 'Dm Sans';
+}
+.banner-Profile {
+  background-image: url('https://res.cloudinary.com/dpcgriaf4/image/upload/v1693110580/tastyKitchen/31924555_sl_063022_51250_19_avrldh.jpg');
+  background-size: cover;
+  height: 15vh;
+  background-repeat: no-repeat;
+  padding-left: 15px;
+  padding-right: 15px;
+  padding-top: 20px;
+}
+.card-for-profile {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-end;
+  padding-top: 15px;
+  padding-left: 10px;
+}
+.profile-photo {
+  width: 80px;
+}
+.card-for-name {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+.website-log-profile {
+  width: 40px;
+  margin-right: 8px;
+}
+.company-name-in-profile {
+  font-size: 20px;
+  color: #f7931e;
+  font-style: italic;
+}
+.btn-profile {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.popup-profile {
+  width: 250px;
+  background-color: #ffffff;
+  padding: 15px;
+  border-radius: 10px;
+  border: 1px solid #d2d4d2;
+}
+.btn-close-profile {
+  border: none;
+  background-color: transparent;
+}
+.btn-icon-close-profile {
+  font-size: 20px;
+  color: #0d9e33;
+  cursor: pointer;
+}
+.btn-card-profile {
+  display: flex;
+  justify-content: flex-end;
+}
+.profile-list-card {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.each-profile {
+  width: 60px;
+  margin: 10px;
+}
+.each-profile-icon {
+  width: 100%;
+}
+.profile-each-btn {
+  border: none;
+  background-color: transparent;
+}
+.btn-remove-profile {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  width: 100%;
+  text-align: center;
+  color: #f7931e;
+  font-weight: 650;
+}
+.name-user {
+  color: #000000;
+  padding-top: 10px;
+  font-size: 20px;
+  font-weight: 600;
+  align-self: center;
+}
+.badge {
+  font-size: 20px;
+  fill: #ffad0a;
+  align-self: center;
+}
+.flex-name-badge {
+  display: flex;
+  padding-left: 6px;
+}
+.details-card-profile {
+  padding-left: 20px;
+  padding-right: 20px;
+  margin-top: 25px;
+}
+.ruler-profile {
+  background-color: #078703;
+  height: 1px;
+}
+.form-for-profile {
+  margin-top: 20px;
+}
+.label-user {
+  color: #000000;
+  font-size: 17px;
+  padding-bottom: 10px;
+  font-weight: 500;
+}
+.input-box-profile {
+  display: flex;
+  padding-bottom: 20px;
+  color: #919491;
+}
+.input-profile {
+  width: 70%;
+  height: 40px;
+  border: none;
+  border-bottom: 1px solid #cdcfcc;
+  font-size: 15px;
+}
+.input-profile:focus {
+  outline: none;
+  border-bottom: block;
+}
+.button-check {
+  border: none;
+  background-color: transparent;
+}
+.check-icon {
+  fill: #078703;
+  font-size: 20px;
+}
+.about-profile {
+  height: 50px;
+  width: 80%;
+  border: none;
+  padding-top: 15px;
+  border-bottom: 1px solid #cdcfcc;
+  font-size: 15px;
+}
+.about-profile:focus {
+  outline: none;
+  border-bottom: block;
+}
+.submit-profile-card {
+  width: 80%;
+  display: flex;
+  justify-content: flex-end;
+}
+.btn-submit-profile {
+  height: 25px;
+  width: 70px;
+  color: #ffffff;
+  background-color: #f7931e;
+  border: none;
+  border-radius: 10px;
+  cursor: pointer;
+}
+.text-profile {
+  color: #000000;
+  font-size: 17px;
+  font-weight: 500;
+}
+.address-text {
+  color: #696a6b;
+  font-size: 15px;
+  padding-top: 10px;
+}
+.add-address-link {
+  text-decoration: none;
+  padding-left: 5px;
+  cursor: pointer;
+  font-size: 16px;
+}
+.address-list {
+  list-style-type: none;
+  display: flex;
+  flex-wrap: wrap;
+}
+.list-each-address {
+  border: 1px solid #969493;
+  color: #6b6a6a;
+  width: 250px;
+  font-size: 15px;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 15px;
+  margin-left: 0px;
+}
+.delete-address {
+  fill: #fa1302;
+  font-size: 16px;
+}
+.cart-card-profile {
+  margin-top: 10px;
+}
+@media screen and (min-width: 768px) {
+  .banner-Profile {
+    height: 25vh;
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+  .popup-profile {
+    width: 320px;
+  }
+  .card-for-profile {
+    padding-top: 20px;
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+  .profile-photo {
+    width: 110px;
+  }
+  .each-profile {
+    width: 80px;
+  }
+  .website-log-profile {
+    width: 54px;
+  }
+  .company-name-in-profile {
+    font-size: 30px;
+  }
+  .card-for-name {
+    padding-top: 35px;
+  }
+  .name-user {
+    font-size: 25px;
+  }
+  .flex-name-badge {
+    padding-left: 15px;
+  }
+  .badge {
+    font-size: 25px;
+  }
+  .btn-submit-profile {
+    height: 35px;
+    width: 100px;
+  }
+  .input-profile {
+    font-size: 18px;
+  }
+  .label-user {
+    font-size: 20px;
+  }
+  .text-profile {
+    font-size: 20px;
+  }
+  .form-for-profile {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+  .address-card-profile {
+    padding-left: 8%;
+    padding-right: 8%;
+  }
+}

@@ -3,8 +3,9 @@ import Popup from 'reactjs-popup'
 import {Link, withRouter} from 'react-router-dom'
 import Cookies from 'js-cookie'
 import {GiHamburgerMenu} from 'react-icons/gi'
-import {CgProfile} from 'react-icons/cg'
-import {AiFillCloseCircle} from 'react-icons/ai'
+import {FaUserCircle} from 'react-icons/fa'
+import {AiFillCloseCircle, AiFillHome} from 'react-icons/ai'
+import {BsFillCartCheckFill} from 'react-icons/bs'
 import AddCartContext from '../../context/AddCartContext'
 
 import './index.css'
@@ -20,6 +21,7 @@ const Header = props => {
     setHamburger(false)
   }
   const logoutBtn = () => {
+    localStorage.removeItem('username')
     Cookies.remove('jwt_token')
     const {history} = props
     history.replace('/login')
@@ -34,24 +36,26 @@ const Header = props => {
           <div className="flex-nav-top">
             <ul className="link-card-list">
               <Link to="/" className="link-nav">
-                <button type="button" className="btn-links-mobile">
-                  <li className="link-list-mobile">Home</li>
-                </button>
+                <li className="link-list-mobile">
+                  <button type="button" className="btn-links-mobile">
+                    <AiFillHome className="home-icon" />
+                  </button>
+                </li>
               </Link>
               <Link to="/cart" className="link-nav">
-                <button type="button" className="btn-links-mobile">
-                  <li className="link-list-mobile">
-                    Cart
+                <li className="link-list-mobile">
+                  <button type="button" className="btn-links-mobile">
+                    <BsFillCartCheckFill className="cart-icon" />
                     {cartList.length > 0 ? (
                       <span className="cart-count"> {cartList.length}</span>
                     ) : null}
-                  </li>
-                </button>
+                  </button>
+                </li>
               </Link>
               <Link to="/profile" className="link-nav">
                 <button type="button" className="btn-links-mobile">
                   <li className="link-list-mobile">
-                    <CgProfile className="profile-icon" />
+                    <FaUserCircle className="profile-icon" />
                   </li>
                 </button>
               </Link>
@@ -87,7 +91,7 @@ const Header = props => {
                           className="conform-btn"
                           onClick={logoutBtn}
                         >
-                          Conform
+                          Confirm
                         </button>
                       </div>
                     </div>
@@ -108,7 +112,7 @@ const Header = props => {
 
         return (
           <>
-            <nav className="mobile-nav-bar">
+            <nav className="mobile-nav-bar-top">
               <div className="card-logo">
                 <Link to="/" className="link-nav-img">
                   <img
@@ -183,7 +187,7 @@ const Header = props => {
                               className="conform-btn"
                               onClick={logoutBtn}
                             >
-                              Conform
+                              Confirm
                             </button>
                           </div>
                         </div>
