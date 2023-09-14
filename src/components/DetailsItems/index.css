@@ -21,7 +21,7 @@
   margin-bottom: 5px;
 }
 .rupee {
-  font-size: 17px;
+  font-size: 15px;
   margin-right: 8px;
   align-self: center;
 }
@@ -32,7 +32,7 @@
   padding-top: 5px;
 }
 .star {
-  font-size: 17px;
+  font-size: 15px;
   margin-right: 8px;
   align-self: center;
   fill: #f7c214;
@@ -44,7 +44,7 @@
   font-weight: 750;
 }
 .name-style {
-  font-size: 18px;
+  font-size: 16px;
 }
 .add-btn {
   height: 30px;
@@ -62,8 +62,8 @@
   margin-top: 10px;
 }
 .increment-btn {
-  height: 30px;
-  width: 30px;
+  height: 25px;
+  width: 25px;
   background-color: transparent;
   margin-right: 10px;
   border-width: 2px;
@@ -79,6 +79,22 @@
   font-weight: 600;
   margin-right: 10px;
 }
+.Not-Saved-star {
+  font-size: 16px;
+  margin-left: 10px;
+  align-self: center;
+}
+.Saved {
+  fill: #0d8701;
+  font-size: 16px;
+  margin-left: 10px;
+  align-self: center;
+}
+.button-save {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
 @media screen and (min-width: 768px) {
   .each-details {
     width: 400px;
@@ -88,13 +104,16 @@
     height: 150px;
   }
   .rupee {
-    font-size: 23px;
+    font-size: 19px;
   }
   .price {
-    font-size: 18px;
+    font-size: 16px;
   }
   .star {
-    font-size: 23px;
+    font-size: 19px;
+  }
+  .save-star {
+    font-size: 21px;
   }
   .rating {
     color: #000000;
@@ -102,6 +121,6 @@
     font-weight: 700;
   }
   .name-style {
-    font-size: 19px;
+    font-size: 17px;
   }
 }

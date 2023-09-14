@@ -62,6 +62,7 @@ class RestaurantDetails extends Component {
           rating: eachItem.rating,
           id: eachItem.id,
           imageUrl: eachItem.image_url,
+          isSaved: false,
         })),
       }
       const {foodItems} = restaurantData
@@ -186,6 +187,31 @@ class RestaurantDetails extends Component {
     )
   }
 
+  storeInLocalStorage = () => {
+    const {foodItemsList} = this.state
+    const filteredList = foodItemsList.filter(
+      eachItem => eachItem.isSaved === true,
+    )
+    localStorage.setItem('saved', JSON.stringify(filteredList))
+  }
+
+  saveFunction = id => {
+    this.setState(
+      prevState => ({
+        foodItemsList: prevState.foodItemsList.map(eachItem => {
+          if (eachItem.id === id) {
+            return {
+              ...eachItem,
+              isSaved: !eachItem.isSaved,
+            }
+          }
+          return eachItem
+        }),
+      }),
+      this.storeInLocalStorage,
+    )
+  }
+
   getFoodItems = () => {
     const {foodItemsList} = this.state
 
@@ -201,6 +227,7 @@ class RestaurantDetails extends Component {
             incrementItem={this.incrementItem}
             decrementItem={this.decrementItem}
             foodItemsList={foodItemsList}
+            saveFunction={this.saveFunction}
           />
         ))}
       </ul>

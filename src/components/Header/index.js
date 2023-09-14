@@ -4,8 +4,9 @@ import {Link, withRouter} from 'react-router-dom'
 import Cookies from 'js-cookie'
 import {GiHamburgerMenu} from 'react-icons/gi'
 import {FaUserCircle} from 'react-icons/fa'
-import {AiFillCloseCircle, AiFillHome} from 'react-icons/ai'
+import {AiFillCloseCircle, AiFillHome, AiFillStar} from 'react-icons/ai'
 import {BsFillCartCheckFill} from 'react-icons/bs'
+import {MdRateReview} from 'react-icons/md'
 import AddCartContext from '../../context/AddCartContext'
 
 import './index.css'
@@ -56,6 +57,20 @@ const Header = props => {
                 <button type="button" className="btn-links-mobile">
                   <li className="link-list-mobile">
                     <FaUserCircle className="profile-icon" />
+                  </li>
+                </button>
+              </Link>
+              <Link to="/saved" className="link-nav">
+                <button type="button" className="btn-links-mobile">
+                  <li className="link-list-mobile">
+                    <AiFillStar className="profile-icon" />
+                  </li>
+                </button>
+              </Link>
+              <Link to="/reviews" className="link-nav">
+                <button type="button" className="btn-links-mobile">
+                  <li className="link-list-mobile">
+                    <MdRateReview className="profile-icon" />
                   </li>
                 </button>
               </Link>
@@ -159,6 +174,32 @@ const Header = props => {
                     ) : null}
                   </li>
                 </Link>
+                <Link to="/reviews" className="link-nav">
+                  <li className="link-list">Reviews</li>
+                </Link>
+                <Link to="/profile" className="link-nav">
+                  <button
+                    type="button"
+                    className="btn-links-mobile"
+                    style={{alignSelf: 'center'}}
+                  >
+                    <li className="link-list-mobile">
+                      <FaUserCircle className="profile-icon" />
+                    </li>
+                  </button>
+                </Link>
+                <Link to="/saved" className="link-nav">
+                  <button
+                    type="button"
+                    className="btn-links-mobile"
+                    style={{alignSelf: 'center'}}
+                  >
+                    <li className="link-list-mobile">
+                      <AiFillStar className="profile-icon" />
+                    </li>
+                  </button>
+                </Link>
+
                 <li className="button-list">
                   <Popup
                     modal

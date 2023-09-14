@@ -9,6 +9,8 @@ import Cart from './components/Cart'
 import NotFound from './components/NotFound'
 import Profile from './components/Profile'
 import Form from './components/Form'
+import Saved from './components/Saved'
+import Reviews from './components/Reviews'
 import './App.css'
 
 class App extends Component {
@@ -113,6 +115,8 @@ class App extends Component {
             <ProtectedRoute exact path="/cart" component={Cart} />
             <ProtectedRoute exact path="/profile" component={Profile} />
             <ProtectedRoute exact path="/add-address" component={Form} />
+            <ProtectedRoute exact path="/saved" component={Saved} />
+            <ProtectedRoute exact path="/reviews" component={Reviews} />
             <Route component={NotFound} />
           </Switch>
         </AddCartContext.Provider>

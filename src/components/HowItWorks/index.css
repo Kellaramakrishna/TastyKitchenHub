@@ -1,0 +1,79 @@
+.How-it-Works-container {
+  margin-top: 25px;
+  margin-left: 20px;
+  margin-right: 20px;
+  background-image: url('https://res.cloudinary.com/dpcgriaf4/image/upload/v1694660648/tastyKitchen/Untitled_design_6_r0p4zh.png');
+  background-size: cover;
+}
+.HIW-heading {
+  color: #000000;
+  font-size: 23px;
+  font-size: bold;
+  margin-top: 20px;
+}
+.card-1-HIW {
+  margin-top: 20px;
+  display: flex;
+}
+.inner-card-1-HIW {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.description-HIW-small {
+  padding-right: 15px;
+  font-size: 12px;
+  color: #000000;
+  font-family: 'roboto';
+}
+.description-HIW-large {
+  padding-right: 15px;
+  color: #000000;
+  font-family: 'roboto';
+}
+.inner-card-image-container {
+  width: 40%;
+}
+.HIW-image {
+  width: 80%;
+}
+.hiw-heading-style {
+  font-size: 15px;
+  color: #fa8f02;
+  font-weight: bold;
+  padding-bottom: 10px;
+}
+@media screen and (max-width: 576px) {
+  .description-HIW-large {
+    display: none;
+  }
+}
+@media screen and (min-width: 576px) {
+  .description-HIW-small {
+    display: none;
+  }
+  .description-HIW-large {
+    font-size: 13px;
+  }
+}
+
+@media screen and (min-width: 768px) {
+  .How-it-Works-container {
+    margin-left: 10%;
+    margin-right: 10%;
+  }
+  .HIW-heading {
+    font-size: 35px;
+  }
+  .description-HIW-small {
+    display: none;
+  }
+  .description-HIW-large {
+    font-size: 20px;
+  }
+  .hiw-heading-style {
+    font-size: 22px;
+  }
+}

@@ -1,0 +1,30 @@
+.saved-list {
+  list-style-type: none;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-top: 25px;
+  padding-left: 20px;
+  padding-right: 20px;
+}
+.delete-saved-container {
+  margin-top: 8px;
+  padding-left: 10px;
+}
+.delete-saved-item {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
+.delete-saved-icon {
+  font-size: 20px;
+}
+@media screen and (min-width: 768px) {
+  .saved-list {
+    padding-left: 6%;
+    padding-right: 6%;
+  }
+  .delete-saved-icon {
+    font-size: 24px;
+  }
+}

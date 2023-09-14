@@ -209,6 +209,23 @@
 .cart-card-profile {
   margin-top: 10px;
 }
+.cart-card-profile {
+  margin-left: 20px;
+  margin-right: 20px;
+}
+.cart-profile {
+  color: #000000;
+  font-size: 17px;
+  font-weight: 500;
+}
+.cart-profile-link {
+  text-decoration: none;
+}
+.cart-count-profile {
+  color: #038c27;
+  font-size: 17px;
+  font-weight: 600;
+}
 @media screen and (min-width: 768px) {
   .banner-Profile {
     height: 25vh;
@@ -267,5 +284,9 @@
   .address-card-profile {
     padding-left: 8%;
     padding-right: 8%;
+  }
+  .cart-card-profile {
+    margin-left: 8%;
+    margin-right: 8%;
   }
 }

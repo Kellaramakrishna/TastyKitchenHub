@@ -312,6 +312,19 @@ const Profile = () => {
         <hr className="ruler-profile" />
         {getFormEleForUserDetails()}
         {getAddressElement()}
+        {/* <div className="cart-card-profile">
+          <p className="cart-profile">Cart</p>
+          <p className="address-text">
+            Your cart contains{' '}
+            <span className="cart-count-profile">
+              {JSON.parse(localStorage.getItem('cartItemsList')).length}
+            </span>{' '}
+            items click here to{' '}
+            <Link to="/cart" className="cart-profile-link">
+              add
+            </Link>
+          </p>
+        </div> */}
       </div>
       <Footer />
     </>

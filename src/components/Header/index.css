@@ -201,14 +201,14 @@
   text-decoration: none;
 }
 .profile-icon {
-  font-size: 23px;
+  font-size: 20px;
   align-self: center;
 }
 .home-icon {
-  font-size: 23px;
+  font-size: 20px;
 }
 .cart-icon {
-  font-size: 23px;
+  font-size: 20px;
 }
 @media screen and (min-width: 768px) {
   .mobile-nav-bar-top {

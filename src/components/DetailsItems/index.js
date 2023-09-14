@@ -5,9 +5,25 @@ import AddCartContext from '../../context/AddCartContext'
 import './index.css'
 
 const DetailsItems = props => {
-  const {eachItem, isAddClickFun, index, decrementItem, incrementItem} = props
+  const {
+    eachItem,
+    isAddClickFun,
+    index,
+    decrementItem,
+    incrementItem,
+    saveFunction,
+  } = props
 
-  const {id, name, cost, rating, imageUrl, isAdded, quantity} = eachItem
+  const {
+    id,
+    name,
+    cost,
+    rating,
+    imageUrl,
+    isAdded,
+    quantity,
+    isSaved,
+  } = eachItem
 
   return (
     <AddCartContext.Consumer>
@@ -23,6 +39,10 @@ const DetailsItems = props => {
 
         const addClicked = () => {
           isAddClickFun(index, addToCart)
+        }
+
+        const addToSaveBtn = () => {
+          saveFunction(id)
         }
 
         const getAddButton = () => (
@@ -62,6 +82,13 @@ const DetailsItems = props => {
           <li className="each-details">
             <img src={imageUrl} alt={name} className="image-each-details" />
             <div className="review-card">
+              <button
+                className="button-save"
+                type="button"
+                onClick={addToSaveBtn}
+              >
+                <AiFillStar className={isSaved ? 'Saved' : 'Not-Saved-star'} />
+              </button>
               <h1 className="name-style">{name}</h1>
               <div className="price-card">
                 <BiRupee className="rupee" />

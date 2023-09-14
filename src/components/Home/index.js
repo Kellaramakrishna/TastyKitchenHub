@@ -9,6 +9,9 @@ import Header from '../Header'
 import CarouselItems from '../CarouselItems'
 import RestaurantItems from '../RestaurantItems'
 import Footer from '../Footer'
+import Locations from '../Locations'
+import HowItWorks from '../HowItWorks'
+
 import './style.css'
 
 const sortByOptions = [
@@ -316,6 +319,8 @@ class Home extends Component {
         <div className="sorting-card-small">{this.getSortingComponent()}</div>
         {this.switchStatement()}
         {this.getPaginationContainer()}
+        <Locations />
+        <HowItWorks />
         <Footer />
       </>
     )
