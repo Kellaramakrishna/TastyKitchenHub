@@ -7,6 +7,7 @@ import Footer from '../Footer'
 
 import './index.css'
 
+// profile avatar list
 const profileList = [
   {
     id: 1,
@@ -45,6 +46,7 @@ const profileList = [
   },
 ]
 
+// default profile avatar
 const defaultProfile = {
   id: 1,
   imageUrl:
@@ -54,6 +56,7 @@ const defaultProfile = {
 const empty = ''
 
 const Profile = () => {
+  // accessing profile avatar from local storage if present other wise assigning default avatar
   const getProfileFromLocalStorage = () => {
     const data = localStorage.getItem('profile')
     const parsedData = JSON.parse(data)
@@ -64,12 +67,15 @@ const Profile = () => {
     return parsedData.imageUrl
   }
 
+  // profile set useState
   const [profileUrl, setProfileState] = useState(getProfileFromLocalStorage())
-  const [nameOfUser, setName] = useState('')
-  const [emailOfUser, setEmail] = useState('')
-  const [aboutOfUser, setAboutMe] = useState('')
-  const [userAddress, setAddress] = useState([])
+  const [nameOfUser, setName] = useState('') // name set using useState
+  const [emailOfUser, setEmail] = useState('') // email set using useState
+  const [aboutOfUser, setAboutMe] = useState('') // about set using useState
+  const [userAddress, setAddress] = useState([]) // userAddress set using useState
 
+  /* if data present in local storage it updates the setAddress 
+  otherwise it updates name,email,about useState */
   useEffect(() => {
     const data = localStorage.getItem('details')
     const parsedData = JSON.parse(data)
@@ -86,7 +92,10 @@ const Profile = () => {
     if (userData !== null) {
       setAddress(userDataList)
     }
-  }, [])
+  }, []) // dependency array which exe the useEffect only once
+
+  /* when change profile clicks then profile stored in 
+  stored in local storage then update setProfileState */
 
   const changeProfile = (imageUrl, id) => {
     const newListProfile = {id, imageUrl}
@@ -96,11 +105,13 @@ const Profile = () => {
     setProfileState(imageUrl)
   }
 
+  // used to remove profile from local and sets ProfileState
   const removeProfile = () => {
     setProfileState(defaultProfile.imageUrl)
     localStorage.removeItem('profile')
   }
 
+  // updates all fields when onChange event triggers
   const setNameOfUser = event => {
     setName(event.target.value)
   }
@@ -113,6 +124,7 @@ const Profile = () => {
     setAboutMe(event.target.value)
   }
 
+  // when add profile clicked details stored in local storage
   const addProfileDetails = event => {
     event.preventDefault()
     const details = {
@@ -153,7 +165,7 @@ const Profile = () => {
           className="input-profile"
           onChange={setEmailOfUser}
         />
-        {emailOfUser !== '' && emailOfUser.includes('@') ? (
+        {emailOfUser !== '' && emailOfUser.endsWith('@gmail.com') ? (
           <button className="button-check" type="button">
             <AiOutlineCheck className="check-icon" />
           </button>

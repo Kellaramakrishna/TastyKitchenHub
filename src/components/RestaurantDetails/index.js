@@ -25,7 +25,7 @@ class RestaurantDetails extends Component {
   }
 
   componentDidMount() {
-    this.getRestaurantApi()
+    this.getRestaurantApi() // calling restaurant Api
   }
 
   getRestaurantApi = async () => {
@@ -65,13 +65,15 @@ class RestaurantDetails extends Component {
           isSaved: false,
         })),
       }
-      const {foodItems} = restaurantData
+      const {foodItems} = restaurantData // storing foodItems separately
 
       this.setState({
         restaurantObj: restaurantData,
         foodItemsList: foodItems,
         apiStatus: apiStatusConstants.success,
       })
+    } else {
+      this.setState({apiStatus: apiStatusConstants.failure})
     }
   }
 
@@ -98,19 +100,25 @@ class RestaurantDetails extends Component {
     </div>
   )
 
+  /* when ever user clicks on add to cart button then addToCart 
+    function will be called  with arg object is passed */
   addToCartFun = (addToCart, index) => {
     const {foodItemsList} = this.state
     addToCart(foodItemsList[index])
   }
 
+  // it calls the incrementCart function with id as arg
   incrementToCartFun = (id, incrementCart) => {
     incrementCart(id)
   }
 
+  // it calls the decrementCart function with id as arg
   decrementToCartFun = (id, decrementCart) => {
     decrementCart(id)
   }
 
+  /* when increment + button clicked state will be updated with quantity+1
+  and then calls the next call back function that is incrementToCartFun */
   incrementItem = (id, incrementCart) => {
     this.setState(
       prevState => ({
@@ -128,9 +136,15 @@ class RestaurantDetails extends Component {
     )
   }
 
+  // when cart zero then deleteCart will be called
+
   removeItemInCartWhenCartZero = (id, deleteCart) => {
     deleteCart(id)
   }
+
+  /* when quantity is 0 the add button 
+  will be displayed by toggling isAdded property then calling callback fun
+  to remove the item present in cart */
 
   getAddButton = (id, deleteCart) => {
     this.setState(
@@ -149,6 +163,9 @@ class RestaurantDetails extends Component {
       () => this.removeItemInCartWhenCartZero(id, deleteCart),
     )
   }
+
+  /* when increment + button clicked state will be updated with quantity-1
+  and then calls the next call back function that is decrementToCartFun */
 
   decrementItem = (id, quantity, decrementCart, deleteCart) => {
     if (quantity === 1) {
@@ -171,6 +188,8 @@ class RestaurantDetails extends Component {
     }
   }
 
+  // updating foodItemsList with index
+
   isAddClickFun = (index, addToCart) => {
     const {foodItemsList} = this.state
 
@@ -187,6 +206,8 @@ class RestaurantDetails extends Component {
     )
   }
 
+  // storing saved items in local storage with key saved
+
   storeInLocalStorage = () => {
     const {foodItemsList} = this.state
     const filteredList = foodItemsList.filter(
@@ -194,6 +215,8 @@ class RestaurantDetails extends Component {
     )
     localStorage.setItem('saved', JSON.stringify(filteredList))
   }
+
+  // when save button clicked then the saveFunction exe
 
   saveFunction = id => {
     this.setState(
@@ -212,6 +235,7 @@ class RestaurantDetails extends Component {
     )
   }
 
+  // displays all food items
   getFoodItems = () => {
     const {foodItemsList} = this.state
 
@@ -233,6 +257,8 @@ class RestaurantDetails extends Component {
       </ul>
     )
   }
+
+  // displays restaurants details view
 
   getResultsOfRestaurants = () => {
     const {restaurantObj} = this.state
@@ -305,7 +331,6 @@ class RestaurantDetails extends Component {
     return (
       <>
         <Header />
-
         {this.switchStatement()}
         <Footer />
       </>

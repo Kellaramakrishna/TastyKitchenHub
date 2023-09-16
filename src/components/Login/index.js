@@ -3,23 +3,25 @@ import {Redirect} from 'react-router-dom'
 import Cookies from 'js-cookie'
 import './index.css'
 
+// import class component and extending properties and methods from React.Component class
 class Login extends Component {
-  state = {username: '', password: '', isErrMsg: false, errorMsg: ''}
+  state = {username: '', password: '', isErrMsg: false, errorMsg: ''} // initializing state
 
   getUsernameInput = event => {
-    this.setState({username: event.target.value})
+    this.setState({username: event.target.value}) // method is used to store the username
   }
 
   getPasswordInput = event => {
-    this.setState({password: event.target.value})
+    this.setState({password: event.target.value}) // method is used to store the password
   }
 
   onSubmitSuccessFull = jwtToken => {
-    Cookies.set('jwt_token', jwtToken, {expires: 30})
+    Cookies.set('jwt_token', jwtToken, {expires: 30}) // used for navigating to home page when login success
     const {history} = this.props
     history.replace('/')
   }
 
+  // on submitting form API call will be made
   getAnApiCall = async () => {
     const {username, password} = this.state
     const userDetails = {
@@ -37,7 +39,7 @@ class Login extends Component {
     const response = await fetch(url, option)
     const data = await response.json()
     if (response.ok === true) {
-      this.onSubmitSuccessFull(data.jwt_token)
+      this.onSubmitSuccessFull(data.jwt_token) // calling onSubmitSuccessFull function
     } else {
       this.setState({isErrMsg: true, errorMsg: data.error_msg})
     }
@@ -46,10 +48,11 @@ class Login extends Component {
   submitDetails = event => {
     const {username} = this.state
     event.preventDefault()
-    localStorage.setItem('username', JSON.stringify(username))
-    this.getAnApiCall()
+    localStorage.setItem('username', JSON.stringify(username)) // storing user name in local storage with key username
+    this.getAnApiCall() // calling API
   }
 
+  // JSX element from mobile view
   getMobileViewCard = () => (
     <div className="website-login-logo-card">
       <img
@@ -59,6 +62,8 @@ class Login extends Component {
       />
     </div>
   )
+
+  // login form for user input
 
   getLoginFormCard = () => {
     const {username, password, isErrMsg, errorMsg} = this.state
@@ -106,6 +111,7 @@ class Login extends Component {
     </div>
   )
 
+  // login form for large devices
   getLoginFormLargeDevice = () => (
     <div className="large-device-form">
       <div className="large-login-card">
@@ -134,7 +140,7 @@ class Login extends Component {
   render() {
     const jwtToken = Cookies.get('jwt_token')
     if (jwtToken !== undefined) {
-      return <Redirect to="/" />
+      return <Redirect to="/" /> // it redirects to home page when jwt present in cookies and does not displays login UI
     }
     return (
       <div className="bg-container">

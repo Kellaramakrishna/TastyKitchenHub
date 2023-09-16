@@ -1,6 +1,6 @@
 import {AiFillStar, AiOutlinePlus, AiOutlineMinus} from 'react-icons/ai'
 import {BiRupee} from 'react-icons/bi'
-import AddCartContext from '../../context/AddCartContext'
+import AddCartContext from '../../context/AddCartContext' // context
 
 import './index.css'
 
@@ -28,6 +28,7 @@ const DetailsItems = props => {
   return (
     <AddCartContext.Consumer>
       {value => {
+        // accessing context value
         const {addToCart, incrementCart, decrementCart, deleteCart} = value
         const decrementFun = () => {
           decrementItem(id, quantity, decrementCart, deleteCart)
@@ -71,6 +72,8 @@ const DetailsItems = props => {
           </div>
         )
 
+        /* if isAdded property not present then return getAddButton 
+        or isAdded is false returns getAddButton    */
         const getToggleButton = () => {
           if (isAdded === undefined || isAdded === false) {
             return getAddButton()

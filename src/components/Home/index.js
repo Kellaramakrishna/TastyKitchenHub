@@ -14,6 +14,7 @@ import HowItWorks from '../HowItWorks'
 
 import './style.css'
 
+// list for sorting the items
 const sortByOptions = [
   {
     id: 0,
@@ -27,6 +28,7 @@ const sortByOptions = [
   },
 ]
 
+// object for API status
 const apiStatusConstants = {
   initial: 'INITIAL',
   success: 'SUCCESS',
@@ -35,6 +37,7 @@ const apiStatusConstants = {
 }
 
 class Home extends Component {
+  // initializing the state
   state = {
     carouselList: [],
     activeSortId: sortByOptions[1].value,
@@ -47,8 +50,8 @@ class Home extends Component {
   }
 
   componentDidMount() {
-    this.getCarouselApi()
-    this.getAllRestaurantsApi()
+    this.getCarouselApi() // calling getCarouselApi to display offers
+    this.getAllRestaurantsApi() // calling API function to display items
   }
 
   getAllRestaurantsApi = async () => {
@@ -85,6 +88,8 @@ class Home extends Component {
         restaurantsList: restaurantsData,
         apiStatus: apiStatusConstants.success,
       })
+    } else {
+      this.setState({apiStatus: apiStatusConstants.failure})
     }
   }
 
@@ -109,6 +114,7 @@ class Home extends Component {
     }
   }
 
+  // used react-slick third-party-package to display carousels
   getCarouselElement = () => {
     const {carouselList} = this.state
 
@@ -133,6 +139,7 @@ class Home extends Component {
     )
   }
 
+  // updating option in select
   updateActiveId = event => {
     this.setState({activeSortId: event.target.value}, this.getAllRestaurantsApi)
   }
@@ -166,6 +173,7 @@ class Home extends Component {
     )
   }
 
+  // JSX element for description
   getDescriptionContainer = () => (
     <div className="description-card">
       <div className="description-card-width">
@@ -179,10 +187,12 @@ class Home extends Component {
     </div>
   )
 
+  // when retry button is clicked Api will be called in case any error occurs
   retryApiCall = () => {
     this.getAllRestaurantsApi()
   }
 
+  // displaying failure view when any failure occurs
   getFailureView = () => (
     <div className="failure-view-card">
       <img
@@ -200,13 +210,17 @@ class Home extends Component {
     </div>
   )
 
+  // displaying loader for loading
+
   getLoadingView = () => (
     <div className="loader-container" data-testid="loader">
       <Loader type="ThreeDots" color="#ff8c21" height="50" width="50" />
     </div>
   )
 
-  getResultsOfRestaurants = () => {
+  // calling RestaurantItems component
+
+  getResults = () => {
     const {restaurantsList} = this.state
 
     return (
@@ -215,6 +229,30 @@ class Home extends Component {
           <RestaurantItems eachItem={eachItem} key={eachItem.id} />
         ))}
       </ul>
+    )
+  }
+
+  getNoResults = () => {
+    console.log('hello')
+    return (
+      <div className="no-results-view-container">
+        <img
+          src="https://res.cloudinary.com/dpcgriaf4/image/upload/v1694848781/9318694_ux0str.jpg"
+          alt="no results"
+          className="no-search-results-img"
+        />
+        <p className="no-results-found-text">No Results Found</p>
+      </div>
+    )
+  }
+
+  getResultsOfRestaurants = () => {
+    const {restaurantsList} = this.state
+
+    return (
+      <>
+        {restaurantsList.length > 0 ? this.getResults() : this.getNoResults()}
+      </>
     )
   }
 
@@ -233,6 +271,7 @@ class Home extends Component {
     }
   }
 
+  // updating offset
   updateOffset = () => {
     const {activePage, limit} = this.state
 
@@ -240,6 +279,7 @@ class Home extends Component {
     this.setState({offset: offsetValue}, this.getAllRestaurantsApi)
   }
 
+  // updating active page when previous button clicks
   previousPage = () => {
     const {activePage} = this.state
     if (activePage > 1) {
@@ -250,9 +290,10 @@ class Home extends Component {
     }
   }
 
+  // updating active page when next button clicks
   nextPage = () => {
     const {activePage} = this.state
-    if (activePage < 20) {
+    if (activePage < 4) {
       this.setState(
         prevState => ({activePage: prevState.activePage + 1}),
         this.updateOffset,

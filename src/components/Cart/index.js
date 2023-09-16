@@ -9,11 +9,13 @@ import SuccessCard from '../SuccessCard'
 import './index.css'
 
 const Cart = () => {
+  // used react hooks useState
   const [isBtnClicked, setBtn] = useState(false)
 
   return (
     <AddCartContext.Consumer>
       {value => {
+        // accessing context value
         const {
           cartList,
           incrementCart,

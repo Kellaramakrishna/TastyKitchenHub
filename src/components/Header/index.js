@@ -81,7 +81,7 @@ const Header = props => {
                   <button
                     className="button-logout"
                     type="button"
-                    style={{height: '30px', width: '80px'}}
+                    style={{height: '25px', width: '70px'}}
                   >
                     Logout
                   </button>

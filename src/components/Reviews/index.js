@@ -151,8 +151,7 @@ class Reviews extends Component {
   }
 
   getReviews = () => {
-    const {reviewsListData, rating} = this.state
-    console.log(typeof rating)
+    const {reviewsListData} = this.state
 
     return (
       <ul className="review-list-items">
